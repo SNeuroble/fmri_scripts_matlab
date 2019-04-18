@@ -1,5 +1,7 @@
 function [struct_data,mask]=structure_data(unstruct_data,mask,varargin)
 % restructure data that has been pulled out of a mask
+% varargin is for structure type. Use defaults if voxelwise or matrix. Otherwise, if 1-D, specify 'none'.
+%
 % Ex: from glm data
 % load glm_data; load gmmask_composite
 % ps = get_multiseed_vals(glm_data,'p'); % another example: unstruct_data=pcc_icc_summary{3,1}{1};
@@ -13,9 +15,8 @@ function [struct_data,mask]=structure_data(unstruct_data,mask,varargin)
 
 % tips:
 % see run_glm line 30 for obtaining gmmask_composite
-% for cruder view: nii=load_nii('temp.nii.gz'); view_nii(nii)
-% use make_glm_imgs after to convert to structured niis
-% varargin is for structure type. Use defaults if voxelwise or matrix. Otherwise, if 1-D, specify 'none'.
+%   use make_glm_imgs after to convert to structured niis
+% for quick view: nii=load_nii('temp.nii.gz'); view_nii(nii)
 
 
 if ~exist('mask','var') | isempty(mask)
