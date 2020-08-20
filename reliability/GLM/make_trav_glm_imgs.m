@@ -8,7 +8,7 @@ ps = get_multiseed_ps(glm_data,'p');
 thresh_ps=threshold_multiseed_pvals(qs);
 
 for i=2:size(thresh_ps,2)      
-    struct_data=structure_data(thresh_ps{3,i},gmmask_composite); 
+    struct_data=structure_data(thresh_ps{3,i},'mask',gmmask_composite); 
     save_mat_as_nii('/Users/stephanie/Documents/data/traveling_subs/5thpass_template_GM_WM_CSF_resl_crop_resampled.nii.gz',struct_data,sprintf('glm_data_tmp%d.nii.gz',i-1)) % visualize
 end
 

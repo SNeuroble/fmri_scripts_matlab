@@ -1,6 +1,6 @@
 # Stephanie's fMRI Analysis Repository - Matlab
 
-These are standalone and toy scripts for miscellaneous tasks. Tested in analysis Matlab 2018b.
+These are standalone and toy scripts for miscellaneous tasks. Tested in Matlab 2018b.
 
 The most useful scripts are probably in general and general\_mri.
 
